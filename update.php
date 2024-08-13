@@ -12,7 +12,6 @@ else{
 $namerr = $regnoerr =  $sexerr = $ageerr = $classerr = "";
 	
 	if ($_SERVER['REQUEST_METHOD'] == "POST") {
-		// code...
 	
 		$name = $_POST['name'];
 		$regno = $_POST['regno'];

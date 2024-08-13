@@ -66,7 +66,7 @@ $namerr = $regnoerr =  $sexerr = $ageerr = $classerr = "";
 	<h3> Student MS</h3>
 <p style="position:relative; left: 1150px; top: -40px;"><?php echo $_SESSION['data'];?> 
 <a href="logout.php" style="color:red;">Logout</a></p></div>
-<center><h3>Record  student</h3></center>
+<center><h3>Record  Student</h3></center>
 	<form method="post" action="">
 		<label>	Name:</label>
 		<input type="text" name="name" placeholder="Enter student name">
@@ -88,11 +88,9 @@ $namerr = $regnoerr =  $sexerr = $ageerr = $classerr = "";
 
 
 		
-	</form><center>
-<h3>Recorded Students Data</h3>
-
-
-
+	</form>
+<center>
+          <h3>Recorded Students Data</h3>
 		<?php
 
 			$sql2 = mysqli_query($link,"select * from studentsData");
@@ -108,8 +106,8 @@ $namerr = $regnoerr =  $sexerr = $ageerr = $classerr = "";
 				echo "<td> ".$row['sex']."</td>";
 				echo "<td> ".$row['age']."</td>";
 				echo "<td> ".$row['class']."</td>";
-				echo " <td colspan='2'> <a href='delete.php?id=".$row['id']."'>Delete</a>
-								        <a href='update.php?id=".$row['id']."'>Update</a>
+				echo " <td colspan='2'> <a href='delete.php?id=".$row['id']."' style='color:red;'>Delete</a>
+								        <a href='update.php?id=".$row['id']."' style='color:blue;'>Update</a>
 				</td></tr>";
 			
 			}
@@ -118,7 +116,7 @@ $namerr = $regnoerr =  $sexerr = $ageerr = $classerr = "";
 		?>
 
 
-
+</center>
 
 </body>
 </html>
